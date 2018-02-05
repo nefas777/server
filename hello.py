@@ -1,10 +1,6 @@
-from cgi 
 def app(environ, start_response):
   status = '200 OK'
   headers = [("Content-Type", "text/plain")]
-  d = parse_qs(environ['QUERY_STRING'])
-  string = ''
-  for k in d:
-    string += k+'='+str(d[k])
+  d = '\n'.join(environ['QUERY_STRING'].split('&'))
   start_response(status, headers)
-  return [string]
+  return [d]

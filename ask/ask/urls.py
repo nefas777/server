@@ -17,11 +17,10 @@ from django.conf.urls import url
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^$', include('ask.qa.urls')),
-    url(r'^login/$', include('ask.qa.urls')),
-    url(r'^question/[\d]/$', include('ask.qa.urls')),
-    url(r'^ask/$', include('ask.qa.urls')),
-    url(r'^popular/$', include('ask.qa.urls')),
-    url(r'^new/$', include('ask.qa.urls'))
+    url(r'^$', include('qa.urls')),
+    url(r'^login/$', include('qa.urls')),
+    url(r'^question/[\d]/$', include('qa.urls')),
+    url(r'^ask/$', include('qa.urls')),
+    url(r'^popular/$', include('qa.urls')),
+    url(r'^new/$', include('qa.urls'))
 ]

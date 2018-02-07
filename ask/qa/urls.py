@@ -2,6 +2,6 @@
 from django.conf.urls import *
 from . import views
 
-urlpastterns = [
+urlpatterns = [
     url(r'^.*$', views.test)
 ]

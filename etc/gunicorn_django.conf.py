@@ -1,3 +1,4 @@
+print('In Gunicorn config')
 CONFIG = { 
   'mode': 'wsgi',
   'working_dir': '/home/box/web/ask/ask',
